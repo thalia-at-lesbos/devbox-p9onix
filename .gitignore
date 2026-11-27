@@ -1,0 +1,23 @@
+# VM disk images and install media. Build inputs, not source:
+# docs/install.md says how to create or obtain each one.
+*.qcow2
+iso/
+
+# Live FUSE mount of the guest file system. Never descend into this.
+mnt/
+
+# Upstream trees, cloned and built in place (docs/install.md §4).
+9pfuse/
+u9fs/
+
+# Scratch from cross-building the guest's Go toolchain (docs/install.md §9).
+go/
+godl/
+gosrc/
+go-plan9-amd64-bootstrap/
+go-plan9*.tar.gz
+go*.linux-amd64.tar.gz
+
+# Build output. Plan 9 binaries have no extension, so each project's
+# target is listed by name as it appears.
+projects/test/test
